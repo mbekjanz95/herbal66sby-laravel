@@ -1,0 +1,111 @@
+.mt-100 {
+    margin-top: 100px;
+}
+
+.bg {
+  background-image: url("hijau.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.paragraf {
+  display: none;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-img-top {
+  width: 100px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#cart-add-success {
+  display: none;
+}
+#delete-wishlist-success {
+  display: none;
+}
+#add-wishlist-success {
+  display: none;
+}
+
+#alert-stok {
+  display: none;
+}
+
+#sukses {
+  display: none;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+/* input[type="number"] {
+  background: transparent;
+  border: none;
+} */
+
+.sub-col {
+  background: transparent;
+  border: none;
+  -moz-appearance: textfield;
+}
+
+.sub-col::-webkit-outer-spin-button,
+.sub-col::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.keterangan {
+  display: none;
+}
+
+.bg-light.card-body.co ul li {
+  margin-bottom: 10px; 
+  display: flex;
+  align-items: center;
+}
+
+#alamat {
+  background-image: none;
+}
+
+.alert-alamat {
+  display: none;
+}
+
+#email-google, #nama-lengkap-google {
+  background-color: rgb(212, 209, 209);
+  border: none;
+}
+
+/* div[style="width:1rem; height:1rem; border-width:0.2em;"].spinner-border.text-success {
+  display: none;
+} */
+
+@media (max-width: 470px) {
+  .keterangan {
+    display: block;
+  }
+
+  #cart-add, #delete-wishlist, #add-wishlist {
+    width: 150px;
+    height: 50px;
+  }
+}
