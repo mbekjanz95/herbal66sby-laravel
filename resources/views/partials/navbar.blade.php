@@ -14,12 +14,7 @@
           <li><a href="#">Halo, {{ auth()->user()->username }}</a></li>
           <li><a href="/wishlist"><i class="fa fa-heart-o" aria-hidden="true"></i> Wishlist</a> </li>
           <li><a href="/keranjang"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Keranjang</a></li>
-          <li>
-            <form action="/logout" method="post">
-               @csrf
-               <button style="background: none; border:none; color: #0da000; font-size: 17px; padding: 7px 13px; font-weight: 600;" type="submit">LOG OUT</button>
-             </form>
-           </li>
+          <li><a href="/logout">Log Out</a></li>
         </ul>
       @else
         <input type="checkbox" id="check">
