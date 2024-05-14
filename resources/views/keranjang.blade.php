@@ -11,7 +11,10 @@
         @if ($keranjang->count() == 0)
 
         @else
-          <h3 class = "text-white card-title">Keranjang ({{$total_produk}} produk)<br>
+          <h3 class = "text-white card-title">
+            <span id="count-produk">
+              Keranjang ({{$total_produk}} produk)<br>
+            </span>
               @php
                 $grand_total = 0;
               @endphp
@@ -221,6 +224,15 @@
                     $('.total-bayar').append(
                     `
                       Rp. ${formattedSum}
+                    `  
+                    );
+
+                    var countNew = $('.thead-dark').length;
+                    
+                    $('#count-produk').html('');
+                    $('#count-produk').append(
+                    `
+                      Keranjang (${countNew} produk)
                     `  
                     );
                   }
