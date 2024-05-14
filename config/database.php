@@ -37,7 +37,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn' => env('DB_URI', 'mongodb://localhost:27017'),
+            'dsn' => env('DB_URI', 'mongodb://<username>:<password>@%2Fhome%2F<usercpanel>%2Fmongodb-0.sock'),
             'database' => 'herbal66',
         ],
 
