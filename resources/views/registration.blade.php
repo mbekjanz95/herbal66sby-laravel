@@ -13,11 +13,11 @@
                         </div>
                     @endif                    
                 <div class="mt-100 input-group mb-3">
-                    <input @if(session('alert')) id="email-google" style="font-weight: bold;" readonly value="{{ session('email') }}" @endif id="email" name="email" type="email" class="form-control form-control-lg fs-6" placeholder="Email">
+                    <input @if(session('alert')) style="font-weight: bold;" readonly value="{{ session('email') }}" @endif id="email" name="email" type="email" class="form-control form-control-lg fs-6" placeholder="Email">
                 </div>
                     <div style="padding:5px; padding-bottom:5px;" id="error-email" class="alert alert-danger text-center"></div>
                 <div class="input-group mb-3">
-                    <input @if(session('alert')) id="nama-lengkap-google" style="font-weight: bold;" readonly value="{{ session('nama_lengkap') }}" @endif id="nama_lengkap" name="nama_lengkap" type="text" class="form-control form-control-lg fs-6" placeholder="Nama Lengkap">
+                    <input @if(session('alert')) style="font-weight: bold;" readonly value="{{ session('nama_lengkap') }}" @endif id="nama_lengkap" name="nama_lengkap" type="text" class="form-control form-control-lg fs-6" placeholder="Nama Lengkap">
                 </div>
                     <div style="padding:5px; padding-bottom:5px;" id="error-nama-lengkap" class="alert alert-danger text-center"></div>
                 <div class="input-group mb-3">
