@@ -104,6 +104,29 @@
       });
 
       $('.inp-produk').val('');
+
+      $('#btn-cari').on('click', function(e) {
+          if ($('.inp-produk').val().length === 0) {
+             e.preventDefault();
+             alert('INPUT HARUS DIISI !'); 
+          }
+      });
+      
+      $('.inp-produk').on('keypress', function(e) {
+          var keycode = (event.keyCode ? event.keyCode : event.which);
+          if ($('.inp-produk').val().length === 0 && keycode == '13') {
+             e.preventDefault();
+             alert('INPUT HARUS DIISI !'); 
+          }
+      });
+
+      $('.inp-produk').on('focus', function() {
+          if ($('.inp-produk').val().length === 0) {
+           $('.inp-produk').attr('placeholder'); 
+          } else {
+           $('.inp-produk').removeAttr('placeholder'); 
+          }
+      });
   
       $('.inp-produk').on('keyup', function() {
         $('.inp-produk').removeAttr('placeholder');
