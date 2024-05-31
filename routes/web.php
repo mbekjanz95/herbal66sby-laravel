@@ -22,8 +22,10 @@ use App\Http\Controllers\WishlistController;
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('layouts.main');
 // });
+
+Route::get('/', [PageController::class,'home']);
 
 Route::get('/home', [PageController::class,'home'])->name('home');
  
