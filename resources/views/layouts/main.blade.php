@@ -17,6 +17,18 @@
 </div>
 
 <div class="cover">
+    <div class="text-center">
+        <svg width="300" height="15">
+            <rect width="50" height="5" x="200" y="8" fill="#0da000" /> 
+        </svg>
+    </div>
+    <h3 class="text-center" style="font-weight: 800; font-family: Manrope, sans-serif;">PRODUK KAMI</h3>
+    <div class="text-center">
+        <svg width="300" height="8">
+            <rect width="50" height="5" x="50" y="0" fill="#0da000" /> 
+        </svg>
+    </div>
+
     <button class="bt-left" onclick="leftScroll()">
       <i class="fas fa-angle-double-left"></i>
     </button>
@@ -50,7 +62,7 @@
 
     @auth
       <a href="/daftar-produk">  
-        <button type="button" class="btn btn-success mb-5 ml-3">
+        <button id="btn-produk" type="button" class="btn btn-success mb-5 ml-3">
           LIHAT PRODUK SELENGKAPNYA >>
         </button>
       </a>
@@ -60,16 +72,22 @@
       </button>
     @endauth
 
-    <section id="maps" class="mt-3">
+     <div class="rect-text text-center">
+        <svg width="300" height="15">
+            <rect width="50" height="5" x="200" y="8" fill="#0da000" /> 
+        </svg>
+    </div>
+    <h3 id="text-lokasi" class="text-center" style="font-weight: 800; font-family: Manrope, sans-serif;">LOKASI KAMI</h3>
+      <div class="rect-text text-center">
+        <svg width="300" height="8">
+            <rect width="50" height="5" x="50" y="0" fill="#0da000" /> 
+        </svg>
+    </div>
+    <section id="maps" class="mt-4">
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15831.383383059389!2d112.7125775!3d-7.258379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7ffdcff2df995%3A0xd63c07f7ebda485d!2sHERBAL%2066%20SURABAYA%20(Habbatussauda%2Fjinten%2C%20Minyak%20Zaitun%2C%20Madu%2C%20dll)!5e0!3m2!1sid!2sid!4v1709784014881!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-
-<footer class="mt-4">
-<h1>Hubungi kami</h1>
-<h4>Jika berminat silahkan langsung datang ke toko offline kami
-  atau hubungi kami via Whatsapp untuk Chat</h4>
-</footer>
+@include('partials.footer')    
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script>
@@ -77,6 +95,13 @@
     $('.about-title').fadeIn(1000).promise().done(function() {
       $('.colored').fadeIn(1000).promise().done(function() {
         $('.paragraf').fadeIn(1500);
+        $('.cover').show();  
+        $('#maps').show();
+        $('#text-lokasi').show();
+        $('#btn-produk').show();
+        $('#btn-list-product').show();
+        $('.rect-text').show();
+        $('#footer').show();
       });
     });
     $('#btn-list-product, #thumb-produk').on('click', function() {
